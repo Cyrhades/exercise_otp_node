@@ -19,5 +19,4 @@ module.exports = (app) => {
 
     // Route pour la page de profil
     app.get('/profile', auth.needAuth, require("./controller.profile.js").get);
-
 }
