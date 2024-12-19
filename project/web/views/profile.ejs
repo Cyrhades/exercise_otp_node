@@ -1,0 +1,16 @@
+<%- include('header') -%>
+<section>
+    <% if (profil.activated == 0) { %>
+        <div class="alert alert-warning">
+            <%= __('Our administrator does not easily validate accounts, but he will regularly check your profile.') %>
+            <%= __('Once your account is activated, you will need to log in again for the activation to take effect.') %>            
+        </div>
+    <% } %>
+    <div class="user-profile">
+        <h3><%= __('Your Profile Information') %></h3>
+        <p><strong><%= __('Username:') %></strong> <%= profil.username %></p>
+        <p><strong><%= __('Email:') %></strong> <%= profil.email %></p>
+        <p><strong><%= __('Join Date:') %></strong> <%= profil.created_at.toDateString() %></p>
+    </div>
+</section>
+<%- include('footer') -%>
